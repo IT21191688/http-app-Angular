@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {PostService} from "../../services/post.service";
 import {SnackBarService} from "../../services/snack-bar.service";
+import Post from "../../dto/post";
 
 @Component({
   selector: 'app-new',
@@ -23,16 +24,25 @@ export class NewComponent {
     body:new FormControl('',Validators.required)
   });
   createData(){
-    this.postService.create(
-      this.form.get('id')?.value,
-      this.form.get('userId')?.value,
-      this.form.get('title')?.value,
-      this.form.get('body')?.value
-    )
-      .subscribe(response=>{
-        if (response){
-         this._snackBar.trigger('saved','close')
-        }
-      });
+    /* this.postService.create(
+       this.form.get('id')?.value,
+       this.form.get('userId')?.value,
+       this.form.get('title')?.value,
+       this.form.get('body')?.value
+     )
+       .subscribe(response=>{
+         if (response){
+          this._snackBar.trigger('saved','close')
+         }
+       });*/
+
+    let post = new Post(
+      this.form.get('id')?.value!,
+      this.form.get('userId')?.value!,
+      this.form.get('title')?.value!,
+      this.form.get('body')?.value!
+    );
+    this.postService.createDataFireStore(post);
+
   }
 }

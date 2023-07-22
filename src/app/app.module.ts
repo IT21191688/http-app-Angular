@@ -19,6 +19,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {LoadingComponent} from './Components/loading/loading.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {HttpManagerInterceptor} from "./Components/interceptors/http-manager.interceptor";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../app/environments/environment";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import {HttpManagerInterceptor} from "./Components/interceptors/http-manager.int
     ReactiveFormsModule,
     MatSnackBarModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
   providers: [
     {
