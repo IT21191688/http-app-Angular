@@ -13,12 +13,12 @@ export class FindComponent {
   constructor(private postService:PostService) {
   }
   loadData(){
-    this.postService.find(this.searchId)
+   /* this.postService.find(this.searchId)
       .subscribe(response=>{
         console.log(response);
         this.list=response;
         console.log(this.list);
-      });
+      });*/
   }
 
 }

@@ -4,7 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {PostService} from "../../services/post.service";
 import {SnackBarService} from "../../services/snack-bar.service";
-import Post from "../../dto/post";
+import Post from "../../dto/Post";
 
 @Component({
   selector: 'app-new',

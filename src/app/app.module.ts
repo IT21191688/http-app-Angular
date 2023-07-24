@@ -18,9 +18,9 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatIconModule} from "@angular/material/icon";
 import {LoadingComponent} from './Components/loading/loading.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import {HttpManagerInterceptor} from "./Components/interceptors/http-manager.interceptor";
+import {HttpManagerInterceptor} from "./interceptors/http-manager.interceptor";
 import {AngularFireModule} from "@angular/fire/compat";
-import {environment} from "../app/environments/environment";
+import {environment} from "../environments/environment";
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 
 @NgModule({

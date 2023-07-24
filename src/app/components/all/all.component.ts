@@ -13,12 +13,12 @@ export class AllComponent implements OnInit{
   constructor(private postService:PostService) {
   }
   ngOnInit(): void {
-    this.postService.findAll()
+   /* this.postService.findAll()
       .subscribe(response=>{
         console.log(response);
         this.list=response;
         console.log(this.list);
-      });
+      });*/
   }
 
 }

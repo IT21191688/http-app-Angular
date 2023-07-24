@@ -24,7 +24,7 @@ export class UpdateComponent {
     body:new FormControl('',Validators.required)
   });
   updateData(){
-    this.postService.update(
+   /* this.postService.update(
       this.form.get('id')?.value,
       this.form.get('userId')?.value,
       this.form.get('title')?.value,
@@ -34,18 +34,18 @@ export class UpdateComponent {
         if (response){
           this._snackBar.trigger('updated','close')
         }
-      });
+      });*/
   }
   loadData(){
-    this.postService.find(this.searchId)
-      .subscribe(response=>{
-        this.form.patchValue({
-          id:response[0].id,
-          userId:response[0].userId,
-          title:response[0].title,
-          body:response[0].body,
-        })
-      });
+    /* this.postService.find(this.searchId)
+       .subscribe(response=>{
+         this.form.patchValue({
+           id:response[0].id,
+           userId:response[0].userId,
+           title:response[0].title,
+           body:response[0].body,
+         })
+       });*/
   }
 
 }
